@@ -32,7 +32,6 @@ export default function WeatherLayoutAlt() {
             { icon: faHouse, label: 'Home'},
             { icon: faLocationDot, label: 'Map', bg: 'bg-sky-100' },
             { icon: faBell, label: 'Alerts' },
-            { icon: faUser, label: 'Menu' }
     ];
 
     return (
@@ -101,7 +100,7 @@ export default function WeatherLayoutAlt() {
                 </section>
             </main>
 
-            <nav className="fixed left-3 right-3 bottom-3 grid grid-cols-4 gap-2 rounded-[28px] bg-white/90 shadow-2xl p-2">
+            <nav className="fixed left-3 right-3 bottom-3 grid grid-cols-3 gap-2 rounded-[28px] bg-white/90 shadow-2xl p-2">
                 {navItems.map((item, index) => (
                     <button
                         key={item.label}

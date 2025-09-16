@@ -14,7 +14,6 @@ export default function WeatherLayout() {
         { icon: faHouse, label: 'Home', bg: 'bg-sky-100' },
         { icon: faLocationDot, label: 'Map' },
         { icon: faBell, label: 'Alerts' },
-        { icon: faUser, label: 'Menu' }
     ];
 
     return (
@@ -30,10 +29,10 @@ export default function WeatherLayout() {
 
             <main className="px-4 pb-28 grid gap-4 md:grid-cols-[1.2fr_.8fr] md:gap-6 md:px-6">
                 <div className="md:col-span-2 inline-flex items-center gap-1 rounded-full bg-cyan-50/80 p-1 w-fit">
-                    <button className="rounded-full px-3 py-1 text-sm font-semibold bg-sky-500 text-white">
+                    <button className="rounded-full px-3 py-1 cursor-pointer text-sm font-semibold bg-sky-500 text-white">
                         °C
                     </button>
-                    <button className="rounded-full px-3 py-1 text-sm font-semibold text-sky-800">
+                    <button className="rounded-full px-3 py-1 cursor-pointer hover:bg-sky-400 text-sm font-semibold text-sky-800">
                         °F
                     </button>
                 </div>
@@ -89,7 +88,7 @@ export default function WeatherLayout() {
                 </section>
             </main>
 
-            <nav className="fixed left-3 right-3 bottom-3 grid grid-cols-4 gap-2 rounded-[28px] bg-white/90 shadow-2xl p-2">
+            <nav className="fixed left-3 right-3 bottom-3 grid grid-cols-3 gap-2 rounded-[28px] bg-white/90 shadow-2xl p-2">
                 {navItems.map((item, index) => (
                     <button
                         key={item.label}
