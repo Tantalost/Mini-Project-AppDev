@@ -1,25 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
-function ToggleButton({ onToggle }) {
-    const [isCelsius, setIsCelsius] = useState(true);
-
-    const handleToggle = () => {
-        const newValue = !isCelsius;
-        setIsCelsius(newValue);
-        if (onToggle) onToggle(newValue ? 'C' : 'F'); 
-    };
-
+function ToggleButton({ isCelsius, onToggle }) {
     return (
         <div className="flex items-center gap-2">
             <button
-                onClick={handleToggle}
+                onClick={() => onToggle("C")}
                 className={`px-4 py-1 rounded-full cursor-pointer font-semibold text-sm shadow transition-colors duration-200 ${isCelsius ? "bg-sky-500 text-white" : "bg-sky-100 text-sky-800"
                     }`}
             >
                 °C
             </button>
             <button
-                onClick={handleToggle}
+                onClick={() => onToggle("F")}
                 className={`px-4 py-1 rounded-full cursor-pointer font-semibold text-sm shadow transition-colors duration-200 ${!isCelsius ? "bg-sky-500 text-white" : "bg-sky-100 text-sky-800"
                     }`}
             >

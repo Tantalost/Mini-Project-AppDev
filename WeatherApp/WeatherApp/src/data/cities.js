@@ -1,5 +1,8 @@
 const cities = {
   'Isabela': {
+    Humidity: '72%',
+    Wind: '12 km/h',
+    Rain: '4 mm',
     Hourly: [
       { time: '8 AM', temp: '28°C' },
       { time: '9 AM', temp: '29°C' },
@@ -25,6 +28,9 @@ const cities = {
     ]
   },
   'Lamitan': {
+    Humidity: '75%',
+    Wind: '10 km/h',
+    Rain: '6 mm',
     Hourly: [
       { time: '8 AM', temp: '27°C' },
       { time: '9 AM', temp: '28°C' },
@@ -50,6 +56,9 @@ const cities = {
     ]
   },
   'Pagadian': {
+    Humidity: '78%',
+    Wind: '15 km/h',
+    Rain: '8 mm',
     Hourly: [
       { time: '8 AM', temp: '26°C' },
       { time: '9 AM', temp: '27°C' },
@@ -75,6 +84,9 @@ const cities = {
     ]
   },
   'Dipolog': {
+    Humidity: '70%',
+    Wind: '11 km/h',
+    Rain: '5 mm',
     Hourly: [
       { time: '8 AM', temp: '27°C' },
       { time: '9 AM', temp: '28°C' },
@@ -100,6 +112,9 @@ const cities = {
     ]
   },
   'Zamboanga': {
+    Humidity: '74%',
+    Wind: '13 km/h',
+    Rain: '7 mm',
     Hourly: [
       { time: '8 AM', temp: '28°C' },
       { time: '9 AM', temp: '29°C' },
@@ -125,3 +140,5 @@ const cities = {
     ]
   }
 };
+
+export default cities;
