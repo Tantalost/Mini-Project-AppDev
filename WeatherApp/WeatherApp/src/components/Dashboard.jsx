@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faLocationDot, faBell, faUser } from '@fortawesome/free-solid-svg-icons';
+import ToggleButton from './ToggleButton';
 
 export default function WeatherLayout() {
     const locations = [
@@ -29,12 +30,7 @@ export default function WeatherLayout() {
 
             <main className="px-4 pb-28 grid gap-4 md:grid-cols-[1.2fr_.8fr] md:gap-6 md:px-6">
                 <div className="md:col-span-2 inline-flex items-center gap-1 rounded-full bg-cyan-50/80 p-1 w-fit">
-                    <button className="rounded-full px-3 py-1 cursor-pointer text-sm font-semibold bg-sky-500 text-white">
-                        °C
-                    </button>
-                    <button className="rounded-full px-3 py-1 cursor-pointer hover:bg-sky-400 text-sm font-semibold text-sky-800">
-                        °F
-                    </button>
+                    <ToggleButton />
                 </div>
 
                 <section className="rounded-2xl bg-white/90 backdrop-saturate-150 shadow-xl p-4">
