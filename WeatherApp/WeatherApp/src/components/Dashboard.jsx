@@ -86,14 +86,15 @@ export default function WeatherLayout() {
 
             <nav className="fixed left-3 right-3 bottom-3 grid grid-cols-3 gap-2 rounded-[28px] bg-white/90 shadow-2xl p-2">
                 {navItems.map((item, index) => (
-                    <button
+                    <Link>
                         key={item.label}
                         aria-label={item.label}
                         className={`h-12 rounded-full cursor-pointer flex items-center justify-center 
                             ${item.bg || 'hover:bg-sky-200 hover:text-gray-600'}`}
-                    >
+                            to={"/weather"}
+                    
                         <FontAwesomeIcon icon={item.icon} className="text-sky-800 text-xl" />
-                    </button>
+                    </Link>
                 ))}
             </nav>
         </div>
