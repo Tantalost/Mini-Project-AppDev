@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faLocationDot} from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import ToggleButton from "./ToggleButton";
 import cities from "../data/cities";
 
@@ -18,6 +18,12 @@ export default function Dashboard({ isCelsius, onToggle }) {
         { icon: faHouse, label: "Home", bg: "bg-sky-100" },
         { icon: faLocationDot, label: "Map" },
     ];
+
+    const getTodayCondition = (cityData) => {
+        const today = new Date().getDay(); 
+        const weeklyIndex = today === 0 ? 6 : today - 1; 
+        return cityData.Weekly[weeklyIndex]?.desc || "Unknown";
+    };
 
     return (
         <div className="min-h-screen w-full bg-gradient-to-br from-sky-300 to-emerald-200 text-slate-900 flex flex-col">
@@ -52,7 +58,7 @@ export default function Dashboard({ isCelsius, onToggle }) {
                         <p className="m-0 text-slate-700">Cloudy</p>
                         <div className="font-bold text-xl">
                             {convertTemp(cities["Zamboanga"].Hourly[0].temp)}
-                        </div>    
+                        </div>
                     </div>
                 </section>
 
@@ -80,7 +86,7 @@ export default function Dashboard({ isCelsius, onToggle }) {
                                     </div>
                                 </div>
                                 <div className="mt-2 flex items-center justify-between">
-                                    <p className="m-0 text-slate-700">Partly Cloudy</p>
+                                    <p className="m-0 text-slate-700">{getTodayCondition(cities[city])}</p>
                                     <div className="font-bold">{convertTemp(cities[city].Hourly[0].temp)}</div>
                                 </div>
                             </Link>

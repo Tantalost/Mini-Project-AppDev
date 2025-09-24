@@ -4,7 +4,7 @@ const cities = {
     Wind: '12 km/h',
     Rain: '4 mm',
     Hourly: [
-      { time: '8 AM', temp: '28°C' },
+      { time: '8 AM', temp: '28°C',  },
       { time: '9 AM', temp: '29°C' },
       { time: '10 AM', temp: '30°C' },
       { time: '11 AM', temp: '31°C' },
