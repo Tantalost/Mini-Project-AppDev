@@ -49,10 +49,10 @@ export default function Dashboard({ isCelsius, onToggle }) {
                         </div>
                     </div>
                     <div className="mt-4 flex items-center justify-between">
-                        <p className="m-0 text-slate-700">Partly Cloudy</p>
+                        <p className="m-0 text-slate-700">Cloudy</p>
                         <div className="font-bold text-xl">
                             {convertTemp(cities["Zamboanga"].Hourly[0].temp)}
-                        </div>
+                        </div>    
                     </div>
                 </section>
 
@@ -94,7 +94,7 @@ export default function Dashboard({ isCelsius, onToggle }) {
                         key={item.label}
                         aria-label={item.label}
                         className={`h-12 rounded-full cursor-pointer flex items-center justify-center 
-              ${item.bg || "hover:bg-sky-200 hover:text-gray-600"}`}
+                        ${item.bg || "hover:bg-sky-200 hover:text-gray-600"}`}
                         to={"/"}
                     >
                         <FontAwesomeIcon icon={item.icon} className="text-sky-800 text-xl" />

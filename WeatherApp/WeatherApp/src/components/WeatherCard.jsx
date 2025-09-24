@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faLocationDot} from '@fortawesome/free-solid-svg-icons';
@@ -15,6 +15,12 @@ export default function WeatherCard({ isCelsius, unit = 'C' }) {
         : "";
 
     const cityData = (formattedName && cities[formattedName]) || null;
+
+    useEffect(() => {
+        if (formattedName) {
+            console.log(`WeatherCard mounted or updated. City: ${formattedName}`);
+        }
+    }, [formattedName]); 
 
     if (!cityData) {
         return <h2 className="text-center mt-10">City not found</h2>;
